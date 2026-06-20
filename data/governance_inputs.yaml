@@ -1,0 +1,190 @@
+# governance_inputs.yaml
+# Governance controls metadata for the three validation scenarios
+# Used by src/governance_checker.py to assess non-metric evidence
+
+scenarios:
+
+  T001:
+    label: "Scenario T001 - Basic RAG, Outdated Documents, No Governance"
+    rag_config: "A"
+    document_set: "outdated"
+    intended_use: "Answer employee questions about model risk management and AI secure development requirements"
+    use_case_risk: "High"
+
+    documents:
+      sources:
+        - name: "sr1107a1.pdf"
+          version: "SR 11-7 (2011)"
+          status: "Superseded"
+          approved: false
+          superseded_by: "SR 26-2"
+          notes: "Original model risk management guidance. Superseded by SR 26-2."
+        - name: "synthetic AI_SDL_v1_0_SUPERSEDED.pdf"
+          version: "AI-SDL v1.0"
+          status: "Superseded"
+          approved: false
+          superseded_by: "AI-SDL v2.0"
+          notes: "Original AI secure development lifecycle standard. Superseded by v2.0."
+      all_sources_approved: false
+      all_sources_current: false
+
+    prompt:
+      versioned: false
+      change_controlled: false
+      last_reviewed: null
+      notes: "No prompt versioning or change control in place."
+
+    monitoring:
+      process_defined: false
+      output_sampling: false
+      drift_detection: false
+      notes: "No monitoring process defined."
+
+    escalation:
+      human_review_path_defined: false
+      escalation_tested: false
+      notes: "No human escalation path defined or tested."
+
+    revalidation:
+      trigger_defined: false
+      schedule_defined: false
+      notes: "No revalidation triggers or schedule defined."
+
+    governance_summary:
+      overall_status: "Fail"
+      critical_gaps:
+        - "Source documents are superseded and not approved for use"
+        - "No prompt versioning or change control"
+        - "No monitoring process"
+        - "No human escalation path"
+        - "No revalidation triggers"
+
+
+  T002:
+    label: "Scenario T002 - Optimized RAG, Outdated Documents, No Governance"
+    rag_config: "B"
+    document_set: "outdated"
+    intended_use: "Answer employee questions about model risk management and AI secure development requirements"
+    use_case_risk: "High"
+
+    documents:
+      sources:
+        - name: "sr1107a1.pdf"
+          version: "SR 11-7 (2011)"
+          status: "Superseded"
+          approved: false
+          superseded_by: "SR 26-2"
+          notes: "Original model risk management guidance. Superseded by SR 26-2."
+        - name: "synthetic AI_SDL_v1_0_SUPERSEDED.pdf"
+          version: "AI-SDL v1.0"
+          status: "Superseded"
+          approved: false
+          superseded_by: "AI-SDL v2.0"
+          notes: "Original AI secure development lifecycle standard. Superseded by v2.0."
+      all_sources_approved: false
+      all_sources_current: false
+
+    prompt:
+      versioned: false
+      change_controlled: false
+      last_reviewed: null
+      notes: "No prompt versioning or change control in place."
+
+    monitoring:
+      process_defined: false
+      output_sampling: false
+      drift_detection: false
+      notes: "No monitoring process defined."
+
+    escalation:
+      human_review_path_defined: false
+      escalation_tested: false
+      notes: "No human escalation path defined or tested."
+
+    revalidation:
+      trigger_defined: false
+      schedule_defined: false
+      notes: "No revalidation triggers or schedule defined."
+
+    governance_summary:
+      overall_status: "Fail"
+      critical_gaps:
+        - "Source documents are superseded and not approved for use"
+        - "Strong RAGAS metrics do not compensate for unapproved source documents"
+        - "No prompt versioning or change control"
+        - "No monitoring process"
+        - "No human escalation path"
+        - "No revalidation triggers"
+      key_insight: >
+        This scenario is the central demonstration of the framework.
+        Config B produces strong faithfulness and relevance scores because
+        the reranker surfaces the best available chunks. However, the source
+        documents are superseded. High metric scores against an unapproved
+        corpus do not constitute valid assurance. Evaluation cannot substitute
+        for governance.
+
+
+  T003:
+    label: "Scenario T003 - Optimized RAG, Current Documents, Full Governance"
+    rag_config: "B"
+    document_set: "current"
+    intended_use: "Answer employee questions about model risk management and AI secure development requirements"
+    use_case_risk: "High"
+
+    documents:
+      sources:
+        - name: "SR2602.pdf"
+          version: "SR 26-2 (2026)"
+          status: "Current"
+          approved: true
+          superseded_by: null
+          notes: "Current authoritative model risk management guidance."
+        - name: "Synthetic AI SDL Standard.pdf"
+          version: "AI-SDL v2.0"
+          status: "Current"
+          approved: true
+          superseded_by: null
+          notes: "Current AI secure development lifecycle standard."
+      all_sources_approved: true
+      all_sources_current: true
+
+    prompt:
+      versioned: true
+      change_controlled: true
+      last_reviewed: "2026-06-01"
+      notes: "Prompt is version-controlled in Git. Changes require AI Governance review."
+
+    monitoring:
+      process_defined: true
+      output_sampling: true
+      drift_detection: true
+      notes: "Weekly output sampling in place. Embedding drift monitored monthly."
+
+    escalation:
+      human_review_path_defined: true
+      escalation_tested: true
+      notes: "Human review path defined and tested quarterly. Escalation to AI Governance Committee."
+
+    revalidation:
+      trigger_defined: true
+      schedule_defined: true
+      triggers:
+        - "Change to foundation model provider"
+        - "Change to retrieval corpus"
+        - "Material change to prompt"
+        - "Regulatory guidance update"
+        - "Annual scheduled revalidation"
+      notes: "Revalidation triggers aligned with AI-SDL v2.0 material change requirements."
+
+    governance_summary:
+      overall_status: "Acceptable with Conditions"
+      conditions:
+        - "Maintain prompt change control process"
+        - "Continue monthly embedding drift monitoring"
+        - "Conduct annual revalidation per schedule"
+        - "Review source document currency on regulatory update cycle"
+      notes: >
+        All governance controls are in place and verified. Strong RAGAS metrics
+        combined with approved current sources and full governance controls
+        support a conclusion of acceptable with conditions. Ongoing monitoring
+        and revalidation schedule must be maintained.

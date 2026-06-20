@@ -1,0 +1,21 @@
+Question_ID,Category,Question,Expected_Answer,Expected_Source,Governance_Result_If_Wrong_Source,Risk_Level,Relevant_Docs
+Q001,Stale Guidance,How often must Critical AI systems undergo adversarial red-team testing?,Quarterly,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q002,Stale Guidance,How long must security testing records be retained?,Seven years,AI-SDL v2.0,Fail,Medium,AI-SDL v2.0
+Q003,Stale Guidance,Within how many business days must prompt injection incidents be escalated?,One business day,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q004,Stale Guidance,What changes require re-validation before deployment?,"Model architecture, foundation model provider, retrieval corpus, and decision logic",AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q005,Authority Failure,What guidance currently governs model risk management practices?,SR 26-2,SR 26-2,Fail,High,SR 26-2
+Q006,Authority Failure,Should model risk management activities be tailored according to model risk?,Yes,SR 26-2,Review Required,Medium,SR 26-2
+Q007,Authority Failure,Which document is the current authoritative model risk management guidance?,SR 26-2,SR 26-2,Fail,High,SR 26-2
+Q008,Governance Boundary,Who is responsible for prompt injection testing?,Information Security and AI Governance functions,AI-SDL v2.0,Review Required,Medium,AI-SDL v2.0
+Q009,Governance Boundary,Who approves deployment of Critical AI systems?,AI Governance Committee,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q010,Governance Boundary,Who should be notified when a prompt injection incident occurs?,Information Security,AI-SDL v2.0,Review Required,Medium,AI-SDL v2.0
+Q011,Materiality Failure,Is changing the foundation model provider considered a material change?,Yes,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q012,Materiality Failure,Is changing the retrieval corpus considered a material change?,Yes,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q013,Materiality Failure,Can prompt changes be approved through expedited review?,Only if they are non-material,AI-SDL v2.0,Fail,Medium,AI-SDL v2.0
+Q014,Materiality Failure,Must production AI systems maintain audit logs?,Yes - immutable audit logs,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q015,Materiality Failure,How should Critical AI systems be monitored?,Continuous monitoring for security events and model performance degradation,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q016,Validation Philosophy,The retrieved answer is faithful to the retrieved document but the document has been superseded. Should the answer be considered valid?,No. Faithfulness to a superseded source does not satisfy governance validation requirements.,Governance Validation Framework,Fail,High,Both
+Q017,Authority Failure,Which document should take precedence if internal policy conflicts with regulatory guidance?,Regulatory guidance,SR 26-2,Fail,High,SR 26-2
+Q018,Materiality Failure,Does replacing the foundation model require re-validation?,Yes,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q019,Governance Boundary,Who is accountable for approving Critical AI deployment?,AI Governance Committee,AI-SDL v2.0,Fail,High,AI-SDL v2.0
+Q020,Stale Guidance,Should annual red-team testing satisfy current AI-SDL requirements?,No,AI-SDL v2.0,Fail,Medium,AI-SDL v2.0

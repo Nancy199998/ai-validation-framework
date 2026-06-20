@@ -1,0 +1,5 @@
+metric,mean_score,scenario,rag_config,doc_set
+faithfulness,0.7,T002,B,outdated
+answer_relevancy,0.8739999999999999,T002,B,outdated
+context_recall,0.6249999999999999,T002,B,outdated
+context_precision,0.5578947368421051,T002,B,outdated

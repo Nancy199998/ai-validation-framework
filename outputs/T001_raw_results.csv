@@ -1,0 +1,21 @@
+question_id,category,risk_level,answer,faithfulness,answer_relevancy,context_recall,context_precision
+Q001,Stale Guidance,High,Critical-risk AI systems shall undergo adversarial red-team testing at least annually.,1.0,0.95,0.0,0.3
+Q002,Stale Guidance,Medium,This information is not available in the approved documents.,0.0,0.85,0.0,0.0
+Q003,Stale Guidance,High,Potential prompt injection incidents shall be escalated to Information Security within five business days.,1.0,1.0,0.0,
+Q004,Stale Guidance,High,Material changes to model architecture shall require re-validation prior to production deployment.,1.0,0.9,0.25,0.35
+Q005,Authority Failure,High,This information is not available in the approved documents.,0.0,0.9,0.0,0.4
+Q006,Authority Failure,Medium,"Yes, details of model risk management practices may vary from bank to bank, as practical application of this guidance should be commensurate with a bank's risk exposures, its business activities, and the extent and complexity of its model use. They should be customized to be commensurate with a bank's risk exposures, its business activities, and the complexity and extent of its model use.",1.0,0.98,0.85,0.85
+Q007,Authority Failure,High,This information is not available in the approved documents.,0.85,1.0,0.9,0.5
+Q008,Governance Boundary,Medium,This information is not available in the approved documents.,1.0,1.0,0.95,0.15
+Q009,Governance Boundary,High,Critical-risk AI systems shall obtain approval from the Technology Risk Committee before production release.,1.0,0.95,0.6,0.65
+Q010,Governance Boundary,Medium,Potential prompt injection incidents shall be escalated to Information Security within five business days.,1.0,0.95,0.9,0.85
+Q011,Materiality Failure,High,This information is not available in the approved documents.,1.0,0.9,1.0,0.7
+Q012,Materiality Failure,High,This information is not available in the approved documents.,0.0,0.85,1.0,0.4
+Q013,Materiality Failure,Medium,This information is not available in the approved documents.,0.0,0.9,0.0,0.1
+Q014,Materiality Failure,High,This information is not available in the approved documents.,,0.9,0.5,0.8
+Q015,Materiality Failure,High,Critical-risk AI systems shall undergo performance reviews at least annually.,1.0,0.85,0.98,0.9
+Q016,Validation Philosophy,High,This information is not available in the approved documents.,0.0,0.6,0.9,0.9
+Q017,Authority Failure,High,This information is not available in the approved documents.,0.0,0.95,0.9,0.9
+Q018,Materiality Failure,High,This information is not available in the approved documents.,0.0,0.95,1.0,0.95
+Q019,Governance Boundary,High,Critical-risk AI systems shall obtain approval from the Technology Risk Committee before production release.,1.0,0.95,0.8,0.35
+Q020,Stale Guidance,Medium,This information is not available in the approved documents.,1.0,0.85,1.0,0.95
