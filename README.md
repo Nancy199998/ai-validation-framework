@@ -2,6 +2,8 @@
 
 > **"Evaluation generates evidence. Validation transforms evidence into assurance. Governance determines whether assurance can be sustained over time."**
 
+📖 Companion blog post: [*Beyond Evaluation: Building Assurance for GenAI and Agentic AI Systems*](https://ailoverxiaonan.wordpress.com/2026/06/06/beyond-evaluation-building-assurance-for-genai-and-agentic-ai-systems/)
+
 This project demonstrates the difference between **AI evaluation** and **AI validation** using a RAG (Retrieval-Augmented Generation) system built for a realistic enterprise use case: answering employee questions about model risk management and AI secure development requirements.
 
 Strong metric scores are not enough. This framework shows why — and what governance controls are required to turn evaluation evidence into genuine assurance.
@@ -201,7 +203,7 @@ Start with the cross-scenario summary, then read individual reports for detail:
 
 This project accompanies the blog post:
 
-**"Beyond Evaluation: Building Assurance for GenAI and Agentic AI Systems"**
+**["Beyond Evaluation: Building Assurance for GenAI and Agentic AI Systems"](https://ailoverxiaonan.wordpress.com/2026/06/06/beyond-evaluation-building-assurance-for-genai-and-agentic-ai-systems/)**
 
 The blog post develops the argument that the AI industry's focus on evaluation metrics — while necessary — is insufficient for high-risk deployments. Validation requires combining metric evidence with governance evidence under a structured risk-based framework.
 
